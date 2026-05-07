@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Modern Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">QuizMaster</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="score-label">Score</span>
+                    <span class="score-value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Streak</span>
+                    <span class="score-value" id="streak">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Question</span>
+                    <span class="score-value" id="questionCounter">1/20</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Quiz Container -->
+        <div class="quiz-container">
+            <!-- Progress Bar -->
+            <div class="progress-wrapper">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+                <div class="timer-display">
+                    <span class="timer-value" id="timerDisplay">10</span>
+                    <span class="timer-unit">s</span>
+                </div>
+            </div>
+
+            <!-- Question -->
+            <div class="question-box">
+                <div class="question-badge" id="questionBadge">Q1</div>
+                <h2 class="question-text" id="questionText"></h2>
+            </div>
+
+            <!-- Options -->
+            <div class="options-container" id="optionsContainer"></div>
+
+            <!-- Quiz Result Modal -->
+            <div class="quiz-result hidden" id="quizResult">
+                <div class="result-content">
+                    <div class="result-icon" id="resultIcon">🎉</div>
+                    <h2 class="result-title" id="resultTitle">Awesome!</h2>
+                    <p class="result-message" id="resultMessage">Correct Answer</p>
+                    <p class="result-next" id="resultCountdown">Next question in <span id="nextTimer">1.4</span>s</p>
+                    <button class="btn-next hidden" id="btnNext">Next Question →</button>
+                </div>
+            </div>
+
+            <!-- Quiz Finished Modal -->
+            <div class="quiz-finished hidden" id="quizFinished">
+                <div class="finished-content">
+                    <div class="finished-icon" id="finishedIcon">🏆</div>
+                    <h2 class="finished-title">Quiz Complete!</h2>
+                    <div class="final-score">
+                        <span class="final-score-label">Final Score</span>
+                        <span class="final-score-value" id="finalScore">0</span>
+                        <span class="final-score-max">/100</span>
+                    </div>
+                    <div class="streak-display">
+                        <span class="streak-label">Best Streak</span>
+                        <span class="streak-value" id="bestStreak">0</span>
+                    </div>
+                    <p class="smart-remark" id="smartRemark"></p>
+                    <button class="btn-restart" id="restartBtn">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
