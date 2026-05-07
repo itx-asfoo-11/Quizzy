@@ -287,7 +287,7 @@ function handleAnswer(selectedOption, selectedIndex) {
     
     if (isCorrect) {
         selectedOption.classList.add("correct");
-        score += 5;
+        score += 1;
         currentStreak += 1;
         if (currentStreak > bestStreak) {
             bestStreak = currentStreak;
