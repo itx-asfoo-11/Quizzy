@@ -15,19 +15,29 @@
         <!-- Header -->
         <div class="header">
             <h1 class="title">QuizMaster</h1>
-            <div class="score-board">
-                <div class="score-item">
-                    <span class="score-label">Score</span>
-                    <span class="score-value" id="score">0</span>
+            <!-- Top Stats Section -->
+            <div class="stats-section">
+                <!-- Score Card -->
+                <div class="stat-card score-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Score</span>
+                        <span class="stat-value" id="score">0</span>
+                    </div>
                 </div>
-                <div class="score-item">
-                    <span class="score-label">Streak</span>
-                    <span class="score-value" id="streak">0</span>
+                <!-- Streak Card -->
+                <div class="stat-card streak-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-content">
+                        <span class="stat-label">Streak</span>
+                        <span class="stat-value" id="streak">0</span>
+                    </div>
                 </div>
-                <div class="score-item">
-                    <span class="score-label">Question</span>
-                    <span class="score-value" id="questionCounter">1/20</span>
-                </div>
+            </div>
+            <!-- Question Counter -->
+            <div class="question-progress">
+                <span class="progress-label">Progress:</span>
+                <span class="progress-value" id="questionCounter">1/20</span>
             </div>
         </div>
 
